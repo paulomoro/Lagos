@@ -1,9 +1,9 @@
+const firstbox = document.querySelector('#firstObserver');
 const box = document.querySelector('#observer');
-let boxEntries;
 const targetElement =document.querySelector('#LagosText');
 
 // const callbackFunction = (entries) => {
-//   boxEntries = entries[0].isIntersecting;
+//   boxEntries = entries[0].isIntersecting; 
 //   console.log(boxEntries);
 // }
 
@@ -11,12 +11,29 @@ const targetElement =document.querySelector('#LagosText');
 
 // observer.observe(box)
 
-
-const newObserver =  new IntersectionObserver((entries, observer) => {
-  boxEntries = entries[0].isIntersecting;
-  console.log(boxEntries);
+const firstObserver = new IntersectionObserver((event) => {
+  event.forEach(event =>{
+    if(event.isIntersecting === false){
+      targetElement.classList.replace('dockToCenter', 'dockToTop')
+    }else{
+      targetElement.classList.replace('dockToTop', 'dockToCenter')
+    }
+  })
 })
 
+const newObserver =  new IntersectionObserver((event) => {
+  
+  event.forEach(i => {
+    if(i.isIntersecting === false){
+      targetElement.classList.replace('dockToCenter', 'dockToTop')
+    }else{
+      targetElement.classList.replace('dockToTop', 'dockToCenter')
+    }
+  })
+})
+
+
+firstObserver.observe(firstbox)
 newObserver.observe(box)
 
-console.log(boxEntries)
+// window.scroll(document.querySelector('#pageMenu'))
