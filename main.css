@@ -44,7 +44,7 @@
   position: fixed;
   top: 1vh;
   left: 2vw;
-  background: url(/asset/LagosText.svg);
+  background: url(./asset/LagosText.svg);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@
 
 .dockToCenter {
   position: absolute;
-  background: url(/asset/LagosText.svg);
+  background: url(./asset/LagosText.svg);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
