@@ -14,8 +14,8 @@
 }
 
 #PageMenu {
-  height: 100vh;
-  background: green;
+  height: 110vh;
+  background: linear-gradient(68.66deg, #222222 99.33%, #8F5E25 100%);
 }
 
 #firstObserver {
