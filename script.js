@@ -29,9 +29,10 @@ firstObserver.observe(firstbox)
 newObserver.observe(box)
 
 
-animated.addEventListener('animationend', () => {
+animated.addEventListener('animationend', (e) => {
   document.querySelector('.loadingAnimation').style.display = 'none';
   window.scrollTo(0,1000);
+  console.log(e.clientY)
 })
 
 
